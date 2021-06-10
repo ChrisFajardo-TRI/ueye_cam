@@ -186,7 +186,7 @@ Node::Node(const rclcpp::NodeOptions & options):
    * Camera Connection
    ******************************************/
   try {
-    Driver::connectCam();
+// DJS    Driver::connectCam();
   } catch (const std::runtime_error& e) {
     std::ostringstream ostream;
     ostream << "failed to connect to camera '" << node_parameters_.camera_name << "', aborting.";
@@ -232,7 +232,7 @@ Node::Node(const rclcpp::NodeOptions & options):
 
   // Set parameters on the camera. Surrender with useful information to the user if it fails.
   try {
-    setCamParams(camera_parameters);
+// DJS    setCamParams(camera_parameters);
   } catch (const std::runtime_error& e) {
     std::ostringstream ostream;
     ostream << "cannot set parameters on camera '" << node_parameters_.camera_name << "', aborting.";
@@ -247,7 +247,7 @@ Node::Node(const rclcpp::NodeOptions & options):
     return;
   }
 
-  startFrameGrabber();   // Ready to go!
+// DJS  startFrameGrabber();   // Ready to go!
   printConfiguration();  // debugging
 
   /******************************************

@@ -32,9 +32,6 @@ ament_target_dependencies(
 # Modern CMake Linking
 target_link_libraries(${PROJECT_NAME}_ros
     ${PROJECT_NAME}_driver
-#   ecl_exceptions::ecl_exceptions
-#   ecl_formatters::ecl_formatters
-#   ecl_geometry::ecl_geometry
 )
 
 set_target_properties(${PROJECT_NAME}_ros
